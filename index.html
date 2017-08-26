@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="elmwoodApp">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Eureka Springs Vacation - Eureka Springs Hotels - Elmwood House Historical Inn</title>
+      <meta name="DESCRIPTION" id="mDescription" content=" Elmwood House Eureka Springs Historical Inn">
+      <meta name="KEYWORDS" id="mKeywords" content="Eureka Springs, Hotel, Lodging, Elmwood House, 110 Spring Street, Eureka Springs, AR, places to stay eureka springs, Motel, Romantic Weekend, Jacuzzi Suite">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+      <script src="elmwoodscript.js"></script>
+      <!-- Bootstrap core CSS -->
+      <script src="js/bootstrap.min.js"></script>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/site.css" rel="stylesheet">
+      <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/datepicker.css" rel="stylesheet">
+      <script src="js/ui-bootstrap-tpls-1.3.2.min.js"</script>
+      <script src="pgwslideshow.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+      <script src="js/site.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/pgwslideshow.css">
+      <script src="js/pgwslideshow.js"></script>
+      <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-72188801-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+      <script>
+         $(document).ready(function() {
+           $('.pgwSlideshow').pgwSlideshow();
+           $(".datepicker").datepicker();
+           $("#datetimepicker1").click()
+         });
+      </script>
+   </head>
+   <!-- NAVBAR
+      ================================================== -->
+   <body ng-controller="mainController">
+      <div class="head">
+         <div class="container-fluid">
+            <div class="row" >
+               <a href="#home"> <img src="./assets/elmwood-header-logo.jpg" class="img-responsive" style="max-height: 385px;max-width: 450px;"> </a>
+            </div>
+         </div>
+      </div>
+      <!--
+      <nav class="navbar navbar-inverse">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            </button> 
+         </div>
+         <div class="collapse navbar-collapse navbar-ex1-collapse" >
+         <ul class="nav navbar-nav navbar-center" >
+
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Rooms<b class="caret"></b></a>
+            <ul class="dropdown-menu inverse">
+            <li><a href="#onyx">Onyx Spring Suite</a></li>
+            <li><a href="#sweet">Sweet Spring Suite</a></li>
+            <li><a href="#harding">Harding Spring Suite</a></li>
+            <li><a href="#magnetic">Magnetic Spring Suite</a></li>
+            </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#policies">Inn Policies</a></li>
+            <li><a href="#about">About the Inn</a></li>
+            <li>
+      
+               <form class="form-inline" role="form">
+                  <div class="form-group">
+                     <label for="checkin" id="reslabel">Check In:</label>
+                     <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                        <span onclick="alert('Click event triggered')" class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                     </div>
+                     <label for="checkout" id="reslabel">Check In:</label>
+                     <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class=" form-control " />
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar" ></span>
+                        </span>
+                     </div>
+               </form>
+               
+               <a href="https://emea.littlehotelier.com/properties/elmwoodhousedirect?utf8=%E2%9C%93&locale=en&check_in_date_display=&check_in_date=&check_out_date_display=&check_out_date=&number_adults=2&number_children=0&button=" id="checkbutton" class="btn btn-danger">Check Availability</a>
+            </li>
+         </ul>
+         </div>
+      </nav>
+      -->
+      <nav class="navbar navbar-default center" role="navigation">
+  <div class="navbar-inner" style="background-color:black;padding-top=0px; border-color:black;color: #FFFFFF;">
+          <!--
+           <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            </button> 
+         </div>-->
+    <ul class="nav navbar-nav" style="background-color:black;padding-top=0px;">
+                <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Rooms<b class="caret"></b></a>
+            <ul class="dropdown-menu inverse">
+            <li><a href="#onyx">Onyx Spring Suite</a></li>
+            <li><a href="#sweet">Sweet Spring Suite</a></li>
+            <li><a href="#harding">Harding Spring Suite</a></li>
+            <li><a href="#magnetic">Magnetic Spring Suite</a></li>
+            </ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#policies">Inn Policies</a></li>
+            <li><a href="#about">About the Inn</a></li>
+                           <li><a href="https://emea.littlehotelier.com/properties/elmwoodhousedirect?utf8=%E2%9C%93&locale=en&check_in_date_display=&check_in_date=&check_out_date_display=&check_out_date=&number_adults=2&number_children=0&button=" id="checkbutton" class="btn btn-danger">Check Availability</a></li>
+    </ul>
+  </div>
+</nav>
+      <div class="container">
+         <div id="main">
+            <div data-ng-view data-autoscroll="false"></div>
+         </div>
+      </div>
+      <footer class="footer-distributed">
+         <div class="footer-left">
+            <h3>Elmwood<span>House</span></h3>
+            <!-- 
+               <p class="footer-links">
+                  <a href="#">Home</a>
+                  ·
+                  <a href="#">Blog</a>
+                  ·
+                  <a href="#">Pricing</a>
+                  ·
+                  <a href="#">About</a>
+                  ·
+                  <a href="#">Faq</a>
+                  ·
+                  <a href="#">Contact</a>
+               </p>
+               -->
+            <p class="footer-company-name">Elmwood House&copy; 2016</p>
+         </div>
+         <div class="footer-center">
+            <div>
+               <a href="https://www.google.com/maps/dir//Elmwood+House,+110+Spring+St,+Eureka+Springs,+AR+72632/@36.4041524,-93.7407375,17z/data=!4m13!1m4!3m3!1s0x87ced2cbe1f5eb5d:0x9ea26db14d0aa838!2sElmwood+House!3b1!4m7!1m0!1m5!1m1!1s0x87ced2cbe1f5eb5d:0x9ea26db14d0aa838!2m2!1d-93.7385435!2d36.4041481"> <i class="fa fa-map-marker"></i> </a>
+               <a href="https://www.google.com/maps/dir//Elmwood+House,+110+Spring+St,+Eureka+Springs,+AR+72632/@36.4041524,-93.7407375,17z/data=!4m13!1m4!3m3!1s0x87ced2cbe1f5eb5d:0x9ea26db14d0aa838!2sElmwood+House!3b1!4m7!1m0!1m5!1m1!1s0x87ced2cbe1f5eb5d:0x9ea26db14d0aa838!2m2!1d-93.7385435!2d36.4041481">110 Spring Street Eureka Springs, AR 72632</a>
+               <!--<p><span>110 Spring Street </span> Eureka Springs, AR 72632</p>-->
+            </div>
+            <div>
+               <i class="fa fa-phone"></i>
+               <!-- Cross-platform compatible (Android + iPhone) -->
+               <a href="tel://479-981-2284">(479) 981-2284</a>
+            </div>
+            <div>
+               <i class="fa fa-envelope"></i>
+               <p><a href="mailto:info@elmwoodhouse1886.com">info@elmwoodhouse1886.com</a></p>
+            </div>
+         </div>
+         <div class="footer-right">
+            <p class="footer-company-about">
+               <span>About the Inn</span>
+               Historical Inn in downtown Eureka Springs, AR.
+            </p>
+            <div class="footer-icons">
+               <a href="https://www.facebook.com/elmwood.house.75"><i class="fa fa-facebook"></i></a>
+               <!--<a href="#"><i class="fa fa-instagram"></i></a>-->
+               <a href="https://www.pinterest.com/elmwoodhouse"><i class="fa fa-pinterest"></i></a>
+               <a href="http://www.tripadvisor.com/Hotel_Review-g31582-d1206852-Reviews-Elmwood_House-Eureka_Springs_Arkansas.html"><i class="fa fa-tripadvisor"></i></a>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
